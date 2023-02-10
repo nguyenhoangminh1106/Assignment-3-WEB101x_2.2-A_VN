@@ -45,18 +45,19 @@ const checkMail = () => {
 const showHide = (element) => {
   let jobContent = document.querySelector(`.${element} .job-info-content`);
   let jobSection = document.querySelector(`.${element}`);
+  let jobButton = document.querySelector(`.${element}-btn`);
 
   if (jobContent.style.display === "none" && element !== `so-thich`) {
     jobContent.style.display = `block`;
     jobSection.style.height = `100%`;
-    element.textContent = "View less";
+    jobButton.textContent = "View less";
   } else if (jobContent.style.display === "none" && element === `so-thich`) {
     jobContent.style.display = `flex`;
     jobSection.style.height = `100%`;
-    element.textContent = "View less";
+    jobButton.textContent = "View less";
   } else {
     jobContent.style.display = `none`;
-    element.textContent = "View more";
+    jobButton.textContent = "View more";
     jobSection.style.height = `50%`;
   }
 };
